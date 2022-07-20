@@ -17,9 +17,31 @@ header{
     background-color:black;
     color:white;
     border-radius: 20px;
-    padding: 50px;
     margin:50px;
 }
+.content{
+       margin:100px 50px 0 50px ;
+}
+.content h1{
+    animation:text 2s 1; 
+     height:100px;
+    
+}
+@keyframes text {
+    0% {
+        letter-spacing: 0px;
+         }
+    30% {
+        letter-spacing: 5px;
+         }
+    85% {
+        letter-spacing: 3px;
+         }
+    100% {
+        letter-spacing: 1px;
+         }
+    
+        }
 .content{
     padding-right: 50px;
 }
@@ -62,10 +84,10 @@ header{
     
 
 }
-.side-bar-button:focus {     
+ .side-bar-button:focus {     
     background-color:rgb(190, 23, 23);
     color:white;
-}
+}  
 .fa-message{
     margin-left: 20px;  
 }
@@ -93,6 +115,9 @@ footer{
     background-color: black;
     padding:100px;
 }
+hr{
+    margin:50px 0;
+}
 .footer_link{
     display: flex;
     justify-content: center;
@@ -100,5 +125,97 @@ footer{
 
 .F_link{
     margin:20px;
-    font-size: 10px;
+    font-size: 12px;
 }
+
+/*---- for mobile screen----*/
+
+@media only screen and (max-width: 600px) {
+    header h1{
+        margin-bottom: 100px;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .mobile_header{
+        display: none;
+    }
+    main{
+        display: grid;
+    }
+    .side_bar{
+        background-color: #fff;
+    }
+    .side-bar-button{
+    
+        text-align: center;
+    }
+    .blogs{
+        display:grid;
+        grid-template-columns:  1fr;
+        gap:20px;
+        margin-top: 20px;
+    }
+   
+    .footer_link{
+        display: grid;
+
+    }
+    img{
+        width:80%;
+        margin-top: 20px;
+    }
+    
+  }
+
+/*-------------- for tablet screen -----------------------*/
+
+
+@media screen and (min-width: 688px)and (max-width:992px){
+    header h1{
+        margin-bottom: 60px;
+    }
+     header{
+        margin-right: 0;
+        padding-right: 50px;
+    } 
+    .content{
+        margin:20px;
+    }
+
+    main {
+      display:grid;
+      padding:0;
+    }
+    .blogs{
+        display:grid;
+        grid-template-columns: repeat(2 , 1fr);
+        gap:20px;
+        margin-top: 20px;
+    }
+    .side_bar{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #fff;
+        width: 100%;
+        
+    }
+    .side-bar-button {
+        height:20px;
+        padding:20px 3vw ;
+        font-size: 17px;
+        
+       
+
+    }
+    .footer_link{
+        display: flex;
+        flex-wrap: wrap;
+     
+    }
+
+    /*-------------------------for mobile screen------------------- */
+
+
+    
